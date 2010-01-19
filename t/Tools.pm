@@ -3,10 +3,7 @@ use strict;
 use warnings;
 use t::Foo;
 
-my $tmpfname = 't/testdb.sqlite';
-unlink $tmpfname;
-
-my $schema = t::Foo->connect("dbi:SQLite:dbname=$tmpfname", '', '');
+my $schema = t::Foo->connect("dbi:SQLite:", '', '');
 $schema->storage->dbh->do(
     q{
         CREATE TABLE cd (
