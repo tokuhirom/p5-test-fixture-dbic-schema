@@ -63,7 +63,9 @@ sub _validate_fixture {
 sub _delete_all {
     my $schema = shift;
 
-    $schema->resultset($_)->delete for $schema->sources;
+    $schema->resultset($_)->delete for
+        grep { $schema->source_registrations->{$_}->isa('DBIx::Class::ResultSource::Table') }
+            $schema->sources;
 }
 
 sub _insert {
