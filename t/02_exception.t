@@ -3,9 +3,7 @@ use warnings;
 use Test::More;
 use t::Tools;
 use Test::Fixture::DBIC::Schema;
-
-eval { require DBD::SQLite; };
-plan skip_all => "DBD::SQLite is not installed." if $@;
+use Test::Requires 'DBD::SQLite';
 
 plan tests => 4;
 

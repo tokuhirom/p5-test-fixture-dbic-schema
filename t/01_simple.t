@@ -4,9 +4,7 @@ use Test::More;
 use t::Tools;
 use Test::Fixture::DBIC::Schema;
 use File::Temp qw/tempfile/;
-
-eval { require DBD::SQLite; };
-plan skip_all => "DBD::SQLite is not installed." if $@;
+use Test::Requires 'DBD::SQLite';
 
 plan tests => 15;
 
