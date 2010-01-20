@@ -22,6 +22,18 @@ $schema->storage->dbh->do(
         );
     }
 );
+$schema->storage->dbh->do(
+    q{
+        CREATE VIEW view_all AS
+            select cd.cdid,
+                   cd.title,
+                   cd.year,
+                   a.artistid as artist_id,
+                   a.name     as artist_name
+            from cd, artist a
+            where cd.artist=a.artistid;
+    }
+);
 
 sub import {
     my $pkg = caller(0);
