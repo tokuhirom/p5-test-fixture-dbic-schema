@@ -12,6 +12,7 @@ test_requires 'Test::Requires';
 author_tests('xt');
 
 build_requires 'Test::More';
+author_requires 'Module::Install::TestBase';
 use_test_base;
 auto_include;
 WriteAll;

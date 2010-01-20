@@ -1,5 +1,9 @@
 Revision history for Perl extension Test::Fixture::DBIC::Schema
 
+0.03    Wed Jan 20 02:42:18 2010
+
+    - add awareness for views and don't write on them
+
 0.02
 
     - fixed prereqs.(reported by SCHWIGON++)

@@ -14,7 +14,9 @@
 ^t/perlcritic
 ^tools/
 \.svn/
+\.git/
 ^[^/]+\.yaml$
 ^[^/]+\.pl$
 ^\.shipit$
 t/testdb.sqlite
+^Test-Fixture-DBIC-Schema-
