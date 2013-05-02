@@ -1,7 +1,7 @@
 package Test::Fixture::DBIC::Schema;
 use strict;
 use warnings;
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 use base 'Exporter';
 our @EXPORT = qw/construct_fixture/;
 use Params::Validate ':all';
