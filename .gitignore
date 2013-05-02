@@ -2,6 +2,9 @@
 Makefile*
 !Makefile.PL
 META.yml
+META.json
+MYMETA.json
+MYMETA.yml
 blib
 build
 inc
