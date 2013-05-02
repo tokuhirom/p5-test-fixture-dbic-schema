@@ -9,10 +9,13 @@ requires 'Params::Validate' => 0.89;
 
 test_requires 'Test::Requires';
 
+author_requires 'Module::Install::AuthorTests';
+author_requires 'Module::Install::TestBase';
+author_requires 'Test::Perl::Critic';
+
 author_tests('xt');
 
 build_requires 'Test::More';
-author_requires 'Module::Install::TestBase';
 use_test_base;
 auto_include;
 WriteAll;
