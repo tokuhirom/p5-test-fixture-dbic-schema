@@ -11,3 +11,10 @@
     name: beatles
   name: artist
   schema: Artist
+- data:
+    recordid: 11
+    artist: 11
+    title: record
+    year: 2019
+  name: record
+  schema: Record
