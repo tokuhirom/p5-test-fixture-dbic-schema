@@ -34,6 +34,16 @@ $schema->storage->dbh->do(
             where cd.artist=a.artistid;
     }
 );
+$schema->storage->dbh->do(
+    q{
+        CREATE TABLE record (
+            recordid INTEGER,
+            artist   INTEGER,
+            title    VARCHAR(255),
+            year     INTEGER
+        );
+    }
+);
 
 sub import {
     my $pkg = caller(0);

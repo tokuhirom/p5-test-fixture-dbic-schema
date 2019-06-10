@@ -32,6 +32,7 @@ t/Foo.pm
 t/Foo/Artist.pm
 t/Foo/CD.pm
 t/Foo/ViewAll.pm
+t/Foo/Record.pm
 t/Tools.pm
 xt/97_podspell.t
 xt/98_perlcritic.t

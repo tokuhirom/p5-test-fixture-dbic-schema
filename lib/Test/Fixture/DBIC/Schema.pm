@@ -65,6 +65,7 @@ sub _delete_all {
 
     $schema->resultset($_)->delete for
         grep { $schema->source_registrations->{$_}->isa('DBIx::Class::ResultSource::Table') }
+        grep { not ref($schema->source_registrations->{$_}->name) }
             $schema->sources;
 }
 
